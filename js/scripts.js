@@ -11,9 +11,9 @@ $(document).ready(function() {
   $("form#toDoForm").submit(function(event) {
     event.preventDefault();
     var userInput = $('#toDoInput').val();
-    $('#returnInput').append("<li><span class='delete'>" + userInput + "</span></li>");
+    $('#returnInput').append("<li>" + userInput + "</li>");
     $('#toDoInput').val('');
-    $('.delete').click(function() {
+    $('li').click(function() {
       $(this).remove();
     });
   });
